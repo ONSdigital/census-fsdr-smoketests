@@ -20,7 +20,7 @@ import java.io.IOException;
 @Component
 public class AdeccoHelper {
 
-  @Value("${security.oauth2.resource.adeccoUrl}")
+  @Value("${security.oauth2.resource.baseurl}")
   private String ADECCO_URL;
 
   @Value("${security.oauth2.client.accessTokenUri}")
