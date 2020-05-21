@@ -42,7 +42,7 @@ public class AdeccoHelper {
   private String query;
 
 
-  public boolean callAdecco() throws IOException {
+  public int callAdecco() throws IOException {
     HttpClient client = HttpClients.custom().build();
     HttpUriRequest request = RequestBuilder.get()
         .setUri(ADECCO_URL + query)
@@ -50,7 +50,7 @@ public class AdeccoHelper {
         .build();
     HttpResponse response = client.execute(request);
 
-    return isSuccess(response.getStatusLine().getStatusCode());
+    return response.getStatusLine().getStatusCode();
   }
 
   private String getAccessToken() throws IOException {

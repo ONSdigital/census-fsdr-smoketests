@@ -6,6 +6,7 @@ import uk.gov.ons.census.fsdr.smoketests.AdeccoHelper;
 
 import java.io.IOException;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class AdeccoSteps {
@@ -14,6 +15,6 @@ public class AdeccoSteps {
 
   @When("^Adecco is running and accessible$")
   public void checkAdeccoRunning() throws IOException {
-   assertTrue(adecco.callAdecco());
+   assertEquals(200,adecco.callAdecco());
   }
 }
