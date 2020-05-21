@@ -1,3 +1,4 @@
+@Acceptance
 Feature: Check all services are running and accessible
 
     Scenario: Check Adecco is running
